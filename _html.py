@@ -8,3 +8,4 @@ class HTML():
     def __init__(self):
         self.base_Dir = "./html/"
         self.index = self.getFile("index.html")
+        self.hiddenIndex = self.getFile("hidden_index.html")
