@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" http-equiv="Content-Type" content="text/html;"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-Content-Type-Options=nosniff"/>
+    <meta http-equiv="Content-Security-Policy" content="child-src 'none'; object-src 'none'"/>
+    <meta http-equiv="content-language" content="ko"/>
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/input.css" />
+    <link rel="stylesheet" type="text/css" href="css/checkbox.css" />
+
+    <title>KKuTuKorea Management : Logs</title>
+</head>
+
+<body>
+    <div id="center">
+        <div id="move">
+            <h1></h1><br/>
+            <form action="" method="GET">
+                <p>Day</p>
+
+                <span class="input inHideo">
+                    <input type="text" name="day" class="field hideo" placeholder="20XX-XX-XX" required />
+                    <label class="label lbHideo" for="">
+                    <i class="fa fa-calendar icon icon" aria-hidden="true"></i>
+                    </label>
+                </span>
+
+                <p>String</p>
+                <span class="input inHideo">
+                    <input type="text" name="string" class="field hideo" placeholder="String to Search" required />
+                    <label class="label lbHideo" for="">
+                    <i class="fa fa-search icon icon" aria-hidden="true"></i>
+                    </label>
+                </span>
+                <br/>
+
+                <header class="header"></header>
+
+                <section class="content">
+                   <ul class="list">
+                      <li class="list__item">
+                         <label class="label--checkbox">
+                         <input type="checkbox" class="checkbox" checked>Web
+                         </label>
+                      </li>
+                      <li class="list__item">
+                         <label class="label--checkbox">
+                         <input type="checkbox" class="checkbox">WebInit
+                         </label>
+                      </li>
+                      <li class="list__item">
+                         <label class="label--checkbox">
+                         <input type="checkbox" class="checkbox">Game
+                         </label>
+                      </li>
+                   </ul>
+                </section>
+                <br/>
+                <input id="submit2" type="submit" />
+            </form>
+            <div id="footer">
+                <hr id="hr"/>
+                <p>ⓒ 2017 <a target="_blank" href="https://fb.com/r3turn.01">이은학</a> all rights reserved.
+                <p>
+                <p>Powered By <a target="_blank" href="https://github.com/return0927">Return0927</a> | Project at <a target="_blank" href="http://sec.kongju.ac.kr/">KNUSEC 공주대학교 정보보호영재교육원</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        'use strict';
+        var checkbox = document.querySelector('#checkbox'),
+        checkboxInput = checkbox.querySelector('#inputID');
+
+        checkboxInput.addEventListener('change', function (e) {
+        checkbox.classList.toggle('checkbox--unchecked', !e.target.checked);
+        checkbox.classList.toggle('checkbox--checked', e.target.checked);
+        });
+    </script>
+</body>
+</html>

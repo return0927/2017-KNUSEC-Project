@@ -1,0 +1,114 @@
+#head {
+	text-align: right;
+	margin-top: 30px;
+	margin-right: 50px;
+}
+
+#sanction {
+	position: absolute;
+	top: -5.5%;
+	left: 4%;
+}
+
+#name {
+	color: #4691DC;
+}
+
+#logout {
+	margin-left: 10px;
+	color: #5ADC46;
+}
+
+
+@media only screen and (max-width: 470px) {
+	#hello {
+		margin-right: -20px;
+		font-size: 17px;
+	}
+	
+	#logout {
+		margin-left: 0px;
+		color: #5ADC46;
+	}
+	
+	#sanction {
+		font-size: 23px;
+		top: -4%;
+	}
+}
+
+#table {
+	width: 85%;
+	border: none;
+	border-collapse: collapse;
+	margin-top: 100px;
+	margin-left: 7.5%;
+}
+
+#table-head {
+	vertical-align: top;
+	padding: 5pt 5pt 5pt 5pt;
+}
+
+#headText {
+	text-align: center;
+}
+
+.bodyText {
+	border-bottom: solid #888 2pt;
+	border-top: solid #000 2pt;
+	padding:3pt 3pt 3pt 3pt;
+}
+
+.fixed {
+	border-bottom: solid #888 2pt;
+	border-top: solid #000 2pt;
+	padding:3pt 3pt 3pt 3pt;
+}
+
+.table-body {
+	margin-top: 2pt;
+	margin-bottom: 2pt;
+	text-align: center;
+}
+
+#table-lv {
+	margin-top: 4pt;
+	margin-bottom: 4pt;
+	margin-left: -15pt;
+}
+
+#lv {
+	font-weight: bold;
+	color: #FFB961;
+}
+
+@media only screen and (max-width: 450px) {
+	#table {
+		width: 85%;
+		border: none;
+		border-collapse: collapse;
+		margin-top: 100px;
+		margin-left: 3%;
+	}
+	
+	#headText {
+		text-align: center;
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#table-lv {
+		margin-top: 4pt;
+		margin-bottom: 4pt;
+		margin-left: 5pt;
+	}
+}
+
+select {
+	background-color: transparent;
+	border: none;
+	color: #9782FF;
+	-webkit-appearance: none; 
+}
