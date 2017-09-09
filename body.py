@@ -4,20 +4,28 @@ from _html import HTML
 
 _KEEP_RUNNING, _WEBHOOK_MODE = True, True
 
-class _SERVER():
-    app = Flask(__name__)
+app = Flask(__name__)
+setting = SETTING()
+html = HTML()
 
-    def __init__(self):
-        self.setting = SETTING()
-        self.html = HTML()
+if not _KEEP_RUNNING:
+    exit()
 
-        if not _KEEP_RUNNING:
-            exit()
+app.config['SECRET_KEY'] = setting.FLASK['SECRET_KEY']
 
-        self.app.config['SECRET_KEY'] = self.setting.FLASK['SECRET_KEY']
 
-    def run(self, host="0.0.0.0", port=80):
-        self.app.run(host=host, port=port)
+@app.route("/css/<path:filename>")
+def _CSS(filename):
+    return send_from_directory("./html/css/", filename=filename)
 
-project = _SERVER()
-project.run()
+
+@app.route("/js/<path:filename>")
+def _JS(filename):
+    return send_from_directory("./html/js/", filename=filename)
+
+
+@app.route("/")
+def _ROOT():
+    return html.index
+
+app.run(host="0.0.0.0", port=setting.FLASK['PORT'])
